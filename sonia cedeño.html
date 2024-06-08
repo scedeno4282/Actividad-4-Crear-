@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenidos a Mi Tienda de Ropa - Sonia Cedeño</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Agregar estilos adicionales aquí */
+        body {
+            background-color: #ffe6e6; /* Color de fondo */
+            font-family: Arial, sans-serif; /* Fuente del texto */
+            color: #333; /* Color del texto */
+        }
+        .navbar {
+            background-color: #c2f0c2; /* Color de fondo de la barra de navegación */
+        }
+        .navbar-brand, .nav-link {
+            color: #008000 !important; /* Color del texto del navbar */
+            font-weight: bold; /* Texto en negrita */
+        }
+        .container {
+            background-color: #ffffff; /* Color de fondo de las secciones */
+            border-radius: 10px; /* Bordes redondeados para las secciones */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra para las secciones */
+            padding: 20px; /* Espaciado interior de las secciones */
+            margin-bottom: 20px; /* Espaciado inferior entre las secciones */
+        }
+        footer {
+            background-color: #c2f0c2; /* Color de fondo del footer */
+            color: #008000; /* Color del texto del footer */
+            font-weight: bold; /* Texto en negrita */
+        }
+        h1, h2, p {
+            color: #ff6699; /* Color del texto de los títulos y párrafos */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#inicio">Bienvenidos a Mi Tienda de Ropa - Sonia Cedeño</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#mision">Misión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#vision">Visión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección de Inicio -->
+    <section id="inicio" class="container mt-5">
+        <h1 class="text-center">¡Bienvenidos a Nuestra Tienda de Ropa!</h1>
+        <p class="text-center">Te saluda Sonia Cedeño</p>
+        <img src="imagen moda.png" alt="Imagen de Inicio" class="img-fluid mx-auto d-block mt-3 mb-3"> <!-- Agrega tu imagen aquí -->
+        <p class="text-center">Explora nuestra amplia selección de ropa de moda y encuentra los mejores estilos para ti.</p>
+    </section>
+
+    <!-- Sección de Misión -->
+    <section id="mision" class="container mt-5">
+        <h2 class="text-center">Nuestra Misión</h2>
+        <p>En nuestra tienda de ropa, nos dedicamos a satisfacer las necesidades de nuestros clientes proporcionando prendas de vestir de alta calidad que reflejen las últimas tendencias de moda. Nos esforzamos por ofrecer un servicio excepcional, brindando una experiencia de compra cómoda y satisfactoria.</p>
+    </section>
+
+    <!-- Sección de Visión -->
+    <section id="vision" class="container mt-5 mb-5">
+        <h2 class="text-center">Nuestra Visión</h2>
+        <p>Nuestra visión es ser reconocidos como líderes en la industria de la moda, siendo la primera opción para los amantes de las tendencias. Nos esforzamos por ofrecer una experiencia de compra inigualable, donde nuestros clientes encuentren inspiración, comodidad y confianza al elegir su estilo.</p>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="container mt-5">
+        <h2 class="text-center">Contacto</h2>
+        <p class="text-center">Teléfono: 0996218024</p>
+        <p class="text-center">Facebook: <a href="https://www.facebook.com/soniacedeño">Sonia Cedeño</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2024 Mi Tienda de Ropa - Sonia Cedeño. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script>
+        // Función para desplazarse suavemente a las secciones
+        $(document).ready(function(){
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
